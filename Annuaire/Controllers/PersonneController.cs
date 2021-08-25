@@ -3,19 +3,18 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Annuaire.Data;
 using Annuaire.Models;
 
-namespace MvcMovie.Controllers
+namespace Annuaire.Controllers
 {
-    public class MoviesController : Controller
+    public class PersonnesController : Controller
     {
         private readonly PersonneContext _context;
 
-        public MoviesController(PersonneContext context)
+        public PersonnesController(PersonneContext context)
         {
             _context = context;
         }
@@ -103,7 +102,7 @@ namespace MvcMovie.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!MovieExists(personne.Id))
+                    if (!PersonneExists(personne.Id))
                     {
                         return NotFound();
                     }
@@ -146,7 +145,7 @@ namespace MvcMovie.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        private bool MovieExists(int id)
+        private bool PersonneExists(int id)
         {
             return _context.Personne.Any(e => e.Id == id);
         }

@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Annuaire</id>
+    <version>1.0.0</version>
+    <authors>Annuaire</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework="net5.0">
+        <dependency id="Microsoft.EntityFrameworkCore" version="5.0.9" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.EntityFrameworkCore.SqlServer" version="5.0.9" exclude="Build,Analyzers" />
+        <dependency id="Pomelo.EntityFrameworkCore.Lolita.MySql" version="1.1.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework="net5.0">
+        <frameworkReference name="Microsoft.AspNetCore.App" />
+      </group>
+    </frameworkReferences>
+    <contentFiles>
+      <files include="any/net5.0/appsettings.Development.json" buildAction="Content" />
+      <files include="any/net5.0/appsettings.json" buildAction="Content" />
+    </contentFiles>
+  </metadata>
+  <files>
+    <file src="D:\CESI\Annuaire\Annuaire\bin\Debug\net5.0\Annuaire.Views.dll" target="lib\net5.0\Annuaire.Views.dll" />
+    <file src="D:\CESI\Annuaire\Annuaire\bin\Debug\net5.0\Annuaire.runtimeconfig.json" target="lib\net5.0\Annuaire.runtimeconfig.json" />
+    <file src="D:\CESI\Annuaire\Annuaire\bin\Debug\net5.0\Annuaire.dll" target="lib\net5.0\Annuaire.dll" />
+    <file src="D:\CESI\Annuaire\Annuaire\obj\Debug\net5.0\staticwebassets\msbuild.Annuaire.Microsoft.AspNetCore.StaticWebAssets.props" target="build\Microsoft.AspNetCore.StaticWebAssets.props" />
+    <file src="D:\CESI\Annuaire\Annuaire\obj\Debug\net5.0\staticwebassets\msbuild.build.Annuaire.props" target="build\Annuaire.props" />
+    <file src="D:\CESI\Annuaire\Annuaire\obj\Debug\net5.0\staticwebassets\msbuild.buildMultiTargeting.Annuaire.props" target="buildMultiTargeting\Annuaire.props" />
+    <file src="D:\CESI\Annuaire\Annuaire\obj\Debug\net5.0\staticwebassets\msbuild.buildTransitive.Annuaire.props" target="buildTransitive\Annuaire.props" />
+    <file src="D:\CESI\Annuaire\Annuaire\wwwroot\css\site.css" target="staticwebassets\css\site.css" />
+    <file src="D:\CESI\Annuaire\Annuaire\wwwroot\favicon.ico" target="staticwebassets\favicon.ico" />
+    <file src="D:\CESI\Annuaire\Annuaire\wwwroot\js\site.js" target="staticwebassets\js\site.js" />
+    <file src="D:\CESI\Annuaire\Annuaire\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css" target="staticwebassets\lib\bootstrap\dist\css\bootstrap-grid.css" />
+    <file src="D:\CESI\Annuaire\Annuaire\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map" target="staticwebassets\lib\bootstrap\dist\css\bootstrap-grid.css.map" />
+    <file src="D:\CESI\Annuaire\Annuaire\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css" target="staticwebassets\lib\bootstrap\dist\css\bootstrap-grid.min.css" />
+    <file src="D:\CESI\Annuaire\Annuaire\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map" target="staticwebassets\lib\bootstrap\dist\css\bootstrap-grid.min.css.map" />
+    <file src="D:\CESI\Annuaire\Annuaire\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css" target="staticwebassets\lib\bootstrap\dist\css\bootstrap-reboot.css" />
+    <file src="D:\CESI\Annuaire\Annuaire\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map" target="staticwebassets\lib\bootstrap\dist\css\bootstrap-reboot.css.map" />
+    <file src="D:\CESI\Annuaire\Annuaire\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css" target="staticwebassets\lib\bootstrap\dist\css\bootstrap-reboot.min.css" />
+    <file src="D:\CESI\Annuaire\Annuaire\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map" target="staticwebassets\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map" />
+    <file src="D:\CESI\Annuaire\Annuaire\wwwroot\lib\bootstrap\dist\css\bootstrap.css" target="staticwebassets\lib\bootstrap\dist\css\bootstrap.css" />
+    <file src="D:\CESI\Annuaire\Annuaire\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map" target="staticwebassets\lib\bootstrap\dist\css\bootstrap.css.map" />
+    <file src="D:\CESI\Annuaire\Annuaire\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css" target="staticwebassets\lib\bootstrap\dist\css\bootstrap.min.css" />
+    <file src="D:\CESI\Annuaire\Annuaire\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map" target="staticwebassets\lib\bootstrap\dist\css\bootstrap.min.css.map" />
+    <file src="D:\CESI\Annuaire\Annuaire\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js" target="staticwebassets\lib\bootstrap\dist\js\bootstrap.bundle.js" />
+    <file src="D:\CESI\Annuaire\Annuaire\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map" target="staticwebassets\lib\bootstrap\dist\js\bootstrap.bundle.js.map" />
+    <file src="D:\CESI\Annuaire\Annuaire\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js" target="staticwebassets\lib\bootstrap\dist\js\bootstrap.bundle.min.js" />
+    <file src="D:\CESI\Annuaire\Annuaire\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map" target="staticwebassets\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map" />
+    <file src="D:\CESI\Annuaire\Annuaire\wwwroot\lib\bootstrap\dist\js\bootstrap.js" target="staticwebassets\lib\bootstrap\dist\js\bootstrap.js" />
+    <file src="D:\CESI\Annuaire\Annuaire\wwwroot\lib\bootstrap\dist\js\bootstrap.js.map" target="staticwebassets\lib\bootstrap\dist\js\bootstrap.js.map" />
+    <file src="D:\CESI\Annuaire\Annuaire\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js" target="staticwebassets\lib\bootstrap\dist\js\bootstrap.min.js" />
+    <file src="D:\CESI\Annuaire\Annuaire\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map" target="staticwebassets\lib\bootstrap\dist\js\bootstrap.min.js.map" />
+    <file src="D:\CESI\Annuaire\Annuaire\wwwroot\lib\bootstrap\LICENSE" target="staticwebassets\lib\bootstrap\LICENSE\LICENSE" />
+    <file src="D:\CESI\Annuaire\Annuaire\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js" target="staticwebassets\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js" />
+    <file src="D:\CESI\Annuaire\Annuaire\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js" target="staticwebassets\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js" />
+    <file src="D:\CESI\Annuaire\Annuaire\wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt" target="staticwebassets\lib\jquery-validation-unobtrusive\LICENSE.txt" />
+    <file src="D:\CESI\Annuaire\Annuaire\wwwroot\lib\jquery-validation\dist\additional-methods.js" target="staticwebassets\lib\jquery-validation\dist\additional-methods.js" />
+    <file src="D:\CESI\Annuaire\Annuaire\wwwroot\lib\jquery-validation\dist\additional-methods.min.js" target="staticwebassets\lib\jquery-validation\dist\additional-methods.min.js" />
+    <file src="D:\CESI\Annuaire\Annuaire\wwwroot\lib\jquery-validation\dist\jquery.validate.js" target="staticwebassets\lib\jquery-validation\dist\jquery.validate.js" />
+    <file src="D:\CESI\Annuaire\Annuaire\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js" target="staticwebassets\lib\jquery-validation\dist\jquery.validate.min.js" />
+    <file src="D:\CESI\Annuaire\Annuaire\wwwroot\lib\jquery-validation\LICENSE.md" target="staticwebassets\lib\jquery-validation\LICENSE.md" />
+    <file src="D:\CESI\Annuaire\Annuaire\wwwroot\lib\jquery\dist\jquery.js" target="staticwebassets\lib\jquery\dist\jquery.js" />
+    <file src="D:\CESI\Annuaire\Annuaire\wwwroot\lib\jquery\dist\jquery.min.js" target="staticwebassets\lib\jquery\dist\jquery.min.js" />
+    <file src="D:\CESI\Annuaire\Annuaire\wwwroot\lib\jquery\dist\jquery.min.map" target="staticwebassets\lib\jquery\dist\jquery.min.map" />
+    <file src="D:\CESI\Annuaire\Annuaire\wwwroot\lib\jquery\LICENSE.txt" target="staticwebassets\lib\jquery\LICENSE.txt" />
+    <file src="D:\CESI\Annuaire\Annuaire\appsettings.Development.json" target="content\appsettings.Development.json" />
+    <file src="D:\CESI\Annuaire\Annuaire\appsettings.Development.json" target="contentFiles\any\net5.0\appsettings.Development.json" />
+    <file src="D:\CESI\Annuaire\Annuaire\appsettings.json" target="content\appsettings.json" />
+    <file src="D:\CESI\Annuaire\Annuaire\appsettings.json" target="contentFiles\any\net5.0\appsettings.json" />
+  </files>
+</package>

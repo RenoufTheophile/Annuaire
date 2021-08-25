@@ -8,6 +8,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using Annuaire.Data;
 
 namespace Annuaire
 {
@@ -24,6 +26,9 @@ namespace Annuaire
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            services.AddDbContext<PersonneContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("PersonneContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -45,13 +50,14 @@ namespace Annuaire
             app.UseRouting();
 
             app.UseAuthorization();
-
+            #region snippet_route
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+            #endregion
         }
     }
 }
