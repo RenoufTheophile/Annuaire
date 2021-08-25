@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Annuaire.Models
 {
@@ -12,7 +14,10 @@ namespace Annuaire.Models
         public string Prenom { get; set; }
         public string Telephone { get; set; }
         public string Service { get; set; }
-        public DateTime Date_entre { get; set; }
+
+        [Display(Name ="Date d'entrer")]
+        [DataType(DataType.Date)]
+        public DateTime Date_entrer { get; set; }
 
 
     }
