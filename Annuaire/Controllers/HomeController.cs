@@ -7,6 +7,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
+
 namespace Annuaire.Controllers
 {
     public class HomeController : Controller

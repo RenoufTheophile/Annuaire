@@ -1,0 +1,7 @@
+D:\CESI\Annuaire\Annuaire\obj\Debug\netcoreapp3.1\Annuaire.csproj.AssemblyReference.cache
+D:\CESI\Annuaire\Annuaire\obj\Debug\netcoreapp3.1\Annuaire.AssemblyInfoInputs.cache
+D:\CESI\Annuaire\Annuaire\obj\Debug\netcoreapp3.1\Annuaire.AssemblyInfo.cs
+D:\CESI\Annuaire\Annuaire\obj\Debug\netcoreapp3.1\Annuaire.csproj.CoreCompileInputs.cache
+D:\CESI\Annuaire\Annuaire\obj\Debug\netcoreapp3.1\Annuaire.MvcApplicationPartsAssemblyInfo.cache
+D:\CESI\Annuaire\Annuaire\obj\Debug\netcoreapp3.1\Annuaire.RazorAssemblyInfo.cache
+D:\CESI\Annuaire\Annuaire\obj\Debug\netcoreapp3.1\Annuaire.RazorAssemblyInfo.cs
