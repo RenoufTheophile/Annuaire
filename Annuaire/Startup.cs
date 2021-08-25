@@ -48,7 +48,7 @@ namespace Annuaire
             app.UseStaticFiles();
 
             app.UseRouting();
-
+            app.UseAuthentication();
             app.UseAuthorization();
             #region snippet_route
             app.UseEndpoints(endpoints =>
