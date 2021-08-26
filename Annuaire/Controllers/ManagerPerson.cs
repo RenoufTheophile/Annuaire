@@ -15,9 +15,5 @@ namespace Annuaire.Controllers
             return View();
         }
 
-        #region Attributs
-        private MySqlConnection connexion; 
-        private static string connectionString = "SERVER=127.0.0.1; DATABASE=annuaire ; UID=root; PASSWORD="; 
-        #endregion
     }
 }

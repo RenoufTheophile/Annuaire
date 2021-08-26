@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "yZ8qF/JysOzxuGK0SOSEuCWe1FSDnhdVWW+0zJpNtDpSFO2fcBJ4ikcPvj5SMR0VT/TGeC7VCp+MBV16FrcyVw==",
+  "dgSpecHash": "zhE+XM1uLiFnlPZBesIbNi3n9cMhe4Rqr27lvS7YN6CwGMPUo4uv6pcREb+WE3EfaCV1DaEqLjq6sw8W7NbxbA==",
   "success": true,
   "projectFilePath": "D:\\CESI\\Annuaire\\Annuaire\\Annuaire.csproj",
   "expectedPackageFiles": [
@@ -10,6 +10,7 @@
     "C:\\Users\\Renouf-Pc\\.nuget\\packages\\k4os.compression.lz4\\1.1.11\\k4os.compression.lz4.1.1.11.nupkg.sha512",
     "C:\\Users\\Renouf-Pc\\.nuget\\packages\\k4os.compression.lz4.streams\\1.1.11\\k4os.compression.lz4.streams.1.1.11.nupkg.sha512",
     "C:\\Users\\Renouf-Pc\\.nuget\\packages\\k4os.hash.xxhash\\1.0.6\\k4os.hash.xxhash.1.0.6.nupkg.sha512",
+    "C:\\Users\\Renouf-Pc\\.nuget\\packages\\microsoft.aspnetcore.diagnostics.entityframeworkcore\\5.0.9\\microsoft.aspnetcore.diagnostics.entityframeworkcore.5.0.9.nupkg.sha512",
     "C:\\Users\\Renouf-Pc\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Renouf-Pc\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",
     "C:\\Users\\Renouf-Pc\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.0.1\\microsoft.data.sqlclient.sni.runtime.2.0.1.nupkg.sha512",
