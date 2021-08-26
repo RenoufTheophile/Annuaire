@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -20,13 +19,13 @@ namespace Annuaire.Controllers
             _context = context;
         }
 
-        // GET: Personne
+        // GET: Personnes
         public async Task<IActionResult> Index()
         {
             return View(await _context.Personne.ToListAsync());
         }
 
-        // GET: Personne/Details/5
+        // GET: Personnes/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -44,18 +43,18 @@ namespace Annuaire.Controllers
             return View(personne);
         }
 
-        // GET: Personne/Create
+        // GET: Personnes/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Personne/Create
+        // POST: Personnes/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nom,Prenom,Telephone,Service,Date_entrer")] Personne personne)
+        public async Task<IActionResult> Create([Bind("Id,Title,ReleaseDate,Genre,Price")] Personne personne)
         {
             if (ModelState.IsValid)
             {
@@ -66,7 +65,7 @@ namespace Annuaire.Controllers
             return View(personne);
         }
 
-        // GET: Personne/Edit/5
+        // GET: Personnes/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -82,12 +81,12 @@ namespace Annuaire.Controllers
             return View(personne);
         }
 
-        // POST: Personne/Edit/5
+        // POST: Personnes/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nom,Prenom,Telephone,Service,Date_entrer")] Personne personne)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,ReleaseDate,Genre,Price")] Personne personne)
         {
             if (id != personne.Id)
             {
@@ -117,7 +116,7 @@ namespace Annuaire.Controllers
             return View(personne);
         }
 
-        // GET: Personne/Delete/5
+        // GET: Personnes/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -135,13 +134,13 @@ namespace Annuaire.Controllers
             return View(personne);
         }
 
-        // POST: Personne/Delete/5
-        [HttpPost, ActionName("Supprimer")]
+        // POST: Personnes/Delete/5
+        [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var movie = await _context.Personne.FindAsync(id);
-            _context.Personne.Remove(movie);
+            var personne = await _context.Personne.FindAsync(id);
+            _context.Personne.Remove(personne);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
