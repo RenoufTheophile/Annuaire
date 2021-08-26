@@ -36,9 +36,5 @@
     </EmbeddedResource>
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Views\Annuaire\" />
-  </ItemGroup>
-
 
 </Project>
