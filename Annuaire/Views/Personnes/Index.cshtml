@@ -9,7 +9,7 @@
 <h1>Index</h1>
 
 <p>
-    <a asp-action="Creer">Créer un nouveau contact</a>
+    <a asp-action="Create">Créer un nouveau contact</a>
 </p>
 <table class="table">
     <thead>
@@ -52,9 +52,9 @@
                 @Html.DisplayFor(modelItem => item.Date_entrer)
             </td>
             <td>
-                <a asp-action="Editer" asp-route-id="@item.Id">Editer</a> |
+                <a asp-action="Edit" asp-route-id="@item.Id">Editer</a> |
                 <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Supprimer" asp-route-id="@item.Id">Supprimer</a>
+                <a asp-action="Delete" asp-route-id="@item.Id">Supprimer</a>
             </td>
         </tr>
         }

@@ -3,7 +3,7 @@
 *@
 @model Annuaire.Models.Personne
 @{
-    ViewData["Title"] = "Editer";
+    ViewData["Title"] = "Edit";
 }
 
 <h1>Editer</h1>
@@ -12,7 +12,7 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <from asp-action="Editer">
+        <from asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
             <div class="form-group">
@@ -43,7 +43,7 @@
 
 
             <div class="form-group">
-                <input type="submit" value="Sauvegarder" class="btn btn-primary" />
+                <input type="submit" value="Edit" class="btn btn-primary" />
             </div>
         </from>
     </div>
