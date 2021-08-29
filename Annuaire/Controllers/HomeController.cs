@@ -6,7 +6,10 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
-
+using System.Net;
+using Newtonsoft.Json;
+using Annuaire.Models;
+using System.Text;
 
 namespace Annuaire.Controllers
 {
@@ -21,7 +24,11 @@ namespace Annuaire.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var url = "https://randomuser.me/api/?results=1";
+            WebClient wc = new WebClient();
+            var data = wc.DownloadString(url);
+            var rs = JsonConvert.DeserializeObject<Root>(data);
+            return View(rs);
         }
 
         public IActionResult Privacy()

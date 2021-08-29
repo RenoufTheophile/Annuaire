@@ -5,4 +5,21 @@
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+    <table>
+        <tr>
+        <td><d>Nom</d></td>
+        <td><d>Prenom</d></td>
+        <td><d>Genre</d></td>
+        </tr>
+
+        @foreach(var personnes in Model.results)
+            {
+    <tr>
+        <td>@personnes.name.first</td>
+        <td>@personnes.name.last</td>
+        <td>@personnes.gender</td>
+    </tr>
+            }
+    </table>
 </div>

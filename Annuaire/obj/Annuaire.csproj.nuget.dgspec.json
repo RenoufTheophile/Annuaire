@@ -1,25 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\CESI\\Annuaire\\Annuaire\\Annuaire.csproj": {}
+    "C:\\Users\\theop\\Desktop\\Annuaire\\Annuaire\\Annuaire\\Annuaire.csproj": {}
   },
   "projects": {
-    "D:\\CESI\\Annuaire\\Annuaire\\Annuaire.csproj": {
+    "C:\\Users\\theop\\Desktop\\Annuaire\\Annuaire\\Annuaire\\Annuaire.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\CESI\\Annuaire\\Annuaire\\Annuaire.csproj",
+        "projectUniqueName": "C:\\Users\\theop\\Desktop\\Annuaire\\Annuaire\\Annuaire\\Annuaire.csproj",
         "projectName": "Annuaire",
-        "projectPath": "D:\\CESI\\Annuaire\\Annuaire\\Annuaire.csproj",
-        "packagesPath": "C:\\Users\\Renouf-Pc\\.nuget\\packages\\",
-        "outputPath": "D:\\CESI\\Annuaire\\Annuaire\\obj\\",
+        "projectPath": "C:\\Users\\theop\\Desktop\\Annuaire\\Annuaire\\Annuaire\\Annuaire.csproj",
+        "packagesPath": "C:\\Users\\theop\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\theop\\Desktop\\Annuaire\\Annuaire\\Annuaire\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Renouf-Pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\theop\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -29,7 +27,8 @@
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {},
-          "https://nuget.org": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://contoso.com/packages/": {}
         },
         "frameworks": {
           "net5.0": {
@@ -79,6 +78,10 @@
               "target": "Package",
               "version": "[8.0.26, )"
             },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
             "Pomelo.EntityFrameworkCore.Lolita.MySql": {
               "target": "Package",
               "version": "[1.1.0, )"
@@ -110,7 +113,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
