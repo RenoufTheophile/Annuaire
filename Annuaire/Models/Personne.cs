@@ -15,10 +15,27 @@ namespace Annuaire.Models
         public string Telephone { get; set; }
         public string Service { get; set; }
 
-        [Display(Name ="Date d'entrer")]
+        [Display(Name = "Date d'entrer")]
         [DataType(DataType.Date)]
         public DateTime Date_entrer { get; set; }
 
+    }
+    public class Employer
+    {
+        public string Genre { get; set; }
+        public string Nom_Fammille { get; set; }
+        public string Pre { get; set; }
+        public string Telephone { get; set; }
+    }
+    public class Societer
+    {
+        public string Poste { get; set; }
+        public DateTime Arriver { get; set; }
 
+    }
+    public class Fusion
+    {
+        public Employer employer { get; set; }
+        public Societer societer { get; set; }
     }
 }
