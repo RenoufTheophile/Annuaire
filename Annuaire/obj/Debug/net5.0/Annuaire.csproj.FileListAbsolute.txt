@@ -174,3 +174,4 @@ C:\Users\theop\Desktop\Annuaire\Annuaire\Annuaire\obj\Debug\net5.0\ref\Annuaire.
 C:\Users\theop\Desktop\Annuaire\Annuaire\Annuaire\obj\Debug\net5.0\Annuaire.pdb
 C:\Users\theop\Desktop\Annuaire\Annuaire\Annuaire\obj\Debug\net5.0\Annuaire.genruntimeconfig.cache
 C:\Users\theop\Desktop\Annuaire\Annuaire\Annuaire\obj\Debug\net5.0\Annuaire.csproj.AssemblyReference.cache
+C:\Users\theop\Desktop\Annuaire\Annuaire\Annuaire\obj\Debug\net5.0\Razor\Views\Personnes\Ramdom.cshtml.g.cs

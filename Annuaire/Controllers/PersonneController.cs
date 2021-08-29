@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using System.Net;
+using Newtonsoft.Json;
 using Annuaire.Data;
 using Annuaire.Models;
 
@@ -143,6 +145,14 @@ namespace Annuaire.Controllers
             _context.Personne.Remove(personne);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
+        }
+        public IActionResult Ramdom()
+        {
+            var url = "https://randomuser.me/api/?results=1";
+            WebClient wc = new WebClient();
+            var data = wc.DownloadString(url);
+            var rs = JsonConvert.DeserializeObject<Root>(data);
+            return View(rs);
         }
 
         private bool PersonneExists(int id)

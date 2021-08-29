@@ -24,11 +24,8 @@ namespace Annuaire.Controllers
 
         public IActionResult Index()
         {
-            var url = "https://randomuser.me/api/?results=1";
-            WebClient wc = new WebClient();
-            var data = wc.DownloadString(url);
-            var rs = JsonConvert.DeserializeObject<Root>(data);
-            return View(rs);
+            
+            return View();
         }
 
         public IActionResult Privacy()
