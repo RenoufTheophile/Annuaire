@@ -8,23 +8,22 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Net;
 using Newtonsoft.Json;
-using Annuaire.Models;
 using System.Text;
 
 namespace Annuaire.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController>_logger;
+        private readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger)
         {
-           
+
         }
 
         public IActionResult Index()
         {
-            
+
             return View();
         }
 
@@ -33,10 +32,6 @@ namespace Annuaire.Controllers
             return View();
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
+      
     }
 }

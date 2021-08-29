@@ -1,9 +1,13 @@
-﻿@*
+﻿﻿@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+
 *@
+
 @model Annuaire.Models.Personne
+
 @{
     ViewData["Title"] = "Supprimer";
+
 }
 
 <h1>Supprimer</h1>
@@ -14,41 +18,41 @@
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Nom)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Nom)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Prenom)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Prenom)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Telephone)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Telephone)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Service)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Service)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Date_entrer)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Date_entrer)
-        </dd>
+@Html.DisplayNameFor(model => model.Nom)
+</dt>
+<dd class="col-sm-10">
+@Html.DisplayFor(model => model.Nom)
+</dd>
+<dt class="col-sm-2">
+@Html.DisplayNameFor(model => model.Prenom)
+</dt>
+<dd class="col-sm-10">
+@Html.DisplayFor(model => model.Prenom)
+</dd>
+<dt class="col-sm-2">
+@Html.DisplayNameFor(model => model.Telephone)
+</dt>
+<dd class="col-sm-10">
+@Html.DisplayFor(model => model.Telephone)
+</dd>
+<dt class="col-sm-2">
+@Html.DisplayNameFor(model => model.Service)
+</dt>
+<dd class="col-sm-10">
+@Html.DisplayFor(model => model.Service)
+</dd>
+<dt class="col-sm-2">
+@Html.DisplayNameFor(model => model.Date_entrer)
+</dt>
+<dd class="col-sm-10">
+@Html.DisplayFor(model => model.Date_entrer)
+</dd>
 
-    </dl>
+</dl>
 
-    <form asp-action="Delete">
-        <input type="hidden" asp-for="Id" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Index">Retour à l'annuaire'</a>
-    </form>
+<form asp-action="Delete">
+    <input type="hidden" asp-for="Id" />
+    <input type="submit" value="Delete" class="btn btn-danger" /> |
+    <a asp-action="Index">Retour à l'annuaire'</a>
+</form>
 </div>

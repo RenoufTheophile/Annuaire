@@ -1,12 +1,16 @@
-﻿@*
+﻿﻿@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+
 *@
+
 @model IEnumerable<Annuaire.Models.Personne>
+
 @{
     ViewData["Title"] = "Index";
+
 }
 
-<h1>Index</h1>
+<h1>Annuaire</h1>
 
 <p>
     <a asp-action="Create">Créer un nouveau contact</a>
@@ -16,48 +20,48 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Nom)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Prenom)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Telephone)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Service)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Date_entrer)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
+@Html.DisplayNameFor(model => model.Nom)
+</th>
+<th>
+@Html.DisplayNameFor(model => model.Prenom)
+</th>
+<th>
+@Html.DisplayNameFor(model => model.Telephone)
+</th>
+<th>
+@Html.DisplayNameFor(model => model.Service)
+</th>
+<th>
+@Html.DisplayNameFor(model => model.Date_entrer)
+</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+@foreach (var item in Model)
         {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nom)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Prenom)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Telephone)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Service)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Date_entrer)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Editer</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Supprimer</a>
-            </td>
+    <tr>
+        <td>
+@Html.DisplayFor(modelItem => item.Nom)
+</td>
+<td>
+@Html.DisplayFor(modelItem => item.Prenom)
+</td>
+<td>
+@Html.DisplayFor(modelItem => item.Telephone)
+</td>
+<td>
+@Html.DisplayFor(modelItem => item.Service)
+</td>
+<td>
+@Html.DisplayFor(modelItem => item.Date_entrer)
+</td>
+<td>
+    <a asp-action="Edit" asp-route-id="@item.Id">Editer</a> |
+    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+    <a asp-action="Delete" asp-route-id="@item.Id">Supprimer</a>
+</td>
         </tr>
-        }
-    </tbody>
+}
+</tbody>
 </table>

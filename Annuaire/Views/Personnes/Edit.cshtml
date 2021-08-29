@@ -1,9 +1,13 @@
-﻿@*
+﻿﻿@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+
 *@
+
 @model Annuaire.Models.Personne
+
 @{
     ViewData["Title"] = "Edit";
+
 }
 
 <h1>Editer</h1>
@@ -44,6 +48,7 @@
 
             <div class="form-group">
                 <input type="submit" value="Edit" class="btn btn-primary" />
+                <a type="submit" value="Edit" class="btn">Test</a>
             </div>
         </from>
     </div>
@@ -53,6 +58,8 @@
     <a asp-action="Index">Retour à l'annuaire'</a>
 </div>
 
+
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
 }

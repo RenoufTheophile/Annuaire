@@ -56,7 +56,7 @@ namespace Annuaire.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nom,Prenom,Telephone,Service,Date_entrer")] Personne personne)
+        public async Task<IActionResult> Create1([Bind("Id, Nom, Prenom, Telephone, Service, Date_entrer")] Personne personne)
         {
             if (ModelState.IsValid)
             {
@@ -88,7 +88,7 @@ namespace Annuaire.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nom,Prenom,Telephone,Service,Date_entrer")] Personne personne)
+        public async Task<IActionResult> Edit1(int id, [Bind("Id, Nom, Prenom, Telephone, Service, Date_entrer")] Personne personne)
         {
             if (id != personne.Id)
             {

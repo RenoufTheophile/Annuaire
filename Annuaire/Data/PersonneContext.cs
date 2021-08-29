@@ -7,7 +7,7 @@ using Annuaire.Models;
 
 namespace Annuaire.Data
 {
-    public class PersonneContext :DbContext
+    public class PersonneContext : DbContext
     {
         public PersonneContext(DbContextOptions<PersonneContext> options)
            : base(options)

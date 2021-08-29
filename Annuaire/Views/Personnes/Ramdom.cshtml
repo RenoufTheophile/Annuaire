@@ -1,5 +1,6 @@
-﻿@{
+﻿﻿@{
     ViewData["Title"] = "Ramdom User";
+
 }
 
 <div class="text-center">
@@ -12,10 +13,10 @@
             <td><d>Date arrivé dans l'entreprise'</d></td>
         </tr>
 
-        @foreach (var personnes in Model.results)
+@foreach (var personnes in Model.results)
         {
-    <tr>
-        <td>@personnes.name.first</td>
+        <tr>
+            <td>@personnes.name.first</td>
         <td>@personnes.name.last</td>
         <td>@personnes.phone</td>
         <td>@personnes.nat</td>

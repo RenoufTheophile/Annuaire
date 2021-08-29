@@ -11,11 +11,16 @@
         <dependency id="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" version="5.0.9" exclude="Build,Analyzers" />
         <dependency id="Microsoft.EntityFrameworkCore" version="5.0.9" exclude="Build,Analyzers" />
         <dependency id="Microsoft.EntityFrameworkCore.SqlServer" version="5.0.9" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.EntityFrameworkCore.Sqlite" version="5.0.9" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.VisualStudio.Web.CodeGeneration.Design" version="5.0.2" exclude="Build,Analyzers" />
         <dependency id="MySql.Data" version="8.0.26" exclude="Build,Analyzers" />
         <dependency id="Newtonsoft.Json" version="13.0.1" exclude="Build,Analyzers" />
         <dependency id="Pomelo.EntityFrameworkCore.Lolita.MySql" version="1.1.0" exclude="Build,Analyzers" />
         <dependency id="System.Net.Http" version="4.3.4" exclude="Build,Analyzers" />
         <dependency id="System.Reactive.Windows.Forms" version="5.0.0" exclude="Build,Analyzers" />
+        <dependency id="jQuery" version="3.6.0" exclude="Build,Analyzers" />
+        <dependency id="jQuery.Validation" version="1.19.3" exclude="Build,Analyzers" />
+        <dependency id="jQuery.Validation.Globalize" version="1.1.0" exclude="Build,Analyzers" />
       </group>
     </dependencies>
     <frameworkReferences>
