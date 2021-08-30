@@ -24,19 +24,19 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Personnes[0].Nom)
+                @Html.DisplayNameFor(model => model.Personnes[0].last)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Personnes[0].Date)
+                @Html.DisplayNameFor(model => model.Personnes[0].date)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Personnes[0].Telephone)
+                @Html.DisplayNameFor(model => model.Personnes[0].phone)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Personnes[0].Service)
+                @Html.DisplayNameFor(model => model.Personnes[0].service)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Personnes[0].Prenom)
+                @Html.DisplayNameFor(model => model.Personnes[0].first)
             </th>
             <th></th>
         </tr>
@@ -46,19 +46,19 @@
         {
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Nom)
+                    @Html.DisplayFor(modelItem => item.last)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Date)
+                    @Html.DisplayFor(modelItem => item.date)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Telephone)
+                    @Html.DisplayFor(modelItem => item.phone)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Service)
+                    @Html.DisplayFor(modelItem => item.service)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Prenom)
+                    @Html.DisplayFor(modelItem => item.first)
                 </td>
                 <td>
                     <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |

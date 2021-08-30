@@ -149,11 +149,23 @@ namespace Annuaire.Controllers
 
         public IActionResult Ramdom()
         {
-            var url = "https://randomuser.me/api/?results=1";
+            var url = "https://randomuser.me/api/?inc=name,email,registered,phone";
             WebClient wc = new WebClient();
             var data = wc.DownloadString(url);
             var rs = JsonConvert.DeserializeObject<Root>(data);
             return View(rs);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Ramdom([Bind("Id, Nom, Prenom, Telephone, Service, Date")] Name name)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Add(name);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(name);
         }
 
         private bool PersonneExists(int id)
