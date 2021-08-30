@@ -345,3 +345,4 @@ C:\Users\theop\Desktop\Annuaire\Annuaire\obj\Debug\net5.0\Annuaire.dll
 C:\Users\theop\Desktop\Annuaire\Annuaire\obj\Debug\net5.0\ref\Annuaire.dll
 C:\Users\theop\Desktop\Annuaire\Annuaire\obj\Debug\net5.0\Annuaire.pdb
 C:\Users\theop\Desktop\Annuaire\Annuaire\obj\Debug\net5.0\Annuaire.genruntimeconfig.cache
+C:\Users\theop\Desktop\Annuaire\Annuaire\obj\Debug\net5.0\Annuaire.csproj.AssemblyReference.cache

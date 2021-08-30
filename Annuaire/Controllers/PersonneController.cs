@@ -155,7 +155,19 @@ namespace Annuaire.Controllers
             var rs = JsonConvert.DeserializeObject<Root>(data);
             return View(rs);
         }
-       
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Ramdom([Bind("Id, first, last, date, phone, service ")] Personne personne)
+        {
+            if (ModelState.IsValid)
+            {
+
+                _context.Add(personne);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(personne);
+        }
 
         private bool PersonneExists(int id)
         {
