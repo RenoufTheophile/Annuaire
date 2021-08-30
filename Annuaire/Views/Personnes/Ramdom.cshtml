@@ -1,8 +1,72 @@
 ﻿@model Annuaire.Models.Root
-
 @{
-    ViewData["Title"] = "Create";
+    ViewBag.Title = "Ramdom";
 }
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#btnSave").click(function () {
+            $.ajax(
+                {
+                    type: "POST", //HTTP POST Method
+                    url: "C:\Users\Renouf-Pc\Desktop\Annuaire\Annuaire\Controllers\PersonneController", // Controller/View
+                    data: { //Passing data
+                        last: $("#txtlast").val(), //Reading text box values using Jquery
+                        first: $("#txtfirst").val(),
+                        date: $("#txtdate").val(),
+                        phone: $("#txtphone").val(),
+                        service: $("txtservice").val()
+                    }
+
+                });
+
+        });
+    });
+
+</script>
+<br />
+<br />
+<fieldset>
+    <div class="form-horizontal">
+        <div class="editor-label">
+            Last
+        </div>
+        <div class="editor-label">
+            <input asp-for=@Model.results[0].name.last type="text" id="txtlast" />
+        </div>
+
+        <div class="editor-label">
+            first
+        </div>
+        <div class="editor-label">
+            <input asp-for=@Model.results[0].name.first type="text" id="txtfirst" />
+        </div>
+
+        <div class="editor-label">
+            date
+        </div>
+        <div class="editor-label">
+            <input asp-for=@Model.results[0].registered.date type="text" id="txtdate" />
+        </div>
+
+        <div class="editor-label">
+            phone
+        </div>
+        <div class="editor-label">
+            <input asp-for=@Model.results[0].phone type="text" id="txtphone" />
+        </div>
+        <div class="editor-label">
+            <br />
+            <input class="btn-default" type="button" id="btnSave" value="Save" />
+        </div>
+    </div>
+</fieldset>
+
+
+
+
+<!--
 
 <h1>Create</h1>
 
@@ -24,17 +88,17 @@
             </div>
             <div class="form-group">
                 <label asp-for=@Model.results[0].registered.date class="control-label"></label>
-                <input asp-for=@Model.results[0].registered.date  class="form-control" />
+                <input asp-for=@Model.results[0].registered.date class="form-control" />
                 <span asp-validation-for=@Model.results[0].registered.date class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for=@Model.results[0].phone class="control-label"></label>
-                <input asp-for=@Model.results[0].phone  class="form-control" />
+                <input asp-for=@Model.results[0].phone class="form-control" />
                 <span asp-validation-for=@Model.results[0].phone class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for=@Model.results[0].registered.service class="control-label"></label>
-                <input asp-for=@Model.results[0].registered.service  class="form-control" />
+                <input asp-for=@Model.results[0].registered.service class="form-control" />
                 <span asp-validation-for=@Model.results[0].registered.service class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -47,7 +111,7 @@
 <div>
     <a asp-action="Index">Back to List</a>
 </div>
-
+    -->
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
