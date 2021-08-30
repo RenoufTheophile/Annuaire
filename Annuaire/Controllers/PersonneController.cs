@@ -157,15 +157,15 @@ namespace Annuaire.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Ramdom([Bind("Id, last, first, phone, service, date")] Name name)
+        public async Task<IActionResult> Ramdom([Bind("Id, last, first, phone, service, date")] Personne personne)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(name);
+                _context.Add(personne);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(name);
+            return View(personne);
         }
 
         private bool PersonneExists(int id)

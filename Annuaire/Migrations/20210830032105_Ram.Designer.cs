@@ -4,14 +4,16 @@ using Annuaire.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Annuaire.Migrations
 {
     [DbContext(typeof(PersonneContext))]
-    partial class PersonneContextModelSnapshot : ModelSnapshot
+    [Migration("20210830032105_Ram")]
+    partial class Ram
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -26,9 +28,6 @@ namespace Annuaire.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<int>("age")
-                        .HasColumnType("int");
-
                     b.Property<DateTime>("date")
                         .HasColumnType("datetime2");
 
@@ -42,9 +41,6 @@ namespace Annuaire.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("service")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("title")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");

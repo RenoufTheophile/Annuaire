@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Annuaire.Models
 {
-    public class Name
+    public class Name1
     {
         public string title { get; set; }
         public string first { get; set; }
@@ -21,7 +21,7 @@ namespace Annuaire.Models
 
     
 
-    public class Result
+    public class Result1
     {
         public Name name { get; set; }
         public string email { get; set; }
@@ -29,7 +29,7 @@ namespace Annuaire.Models
         public string phone { get; set; }
     }
 
-    public class Info
+    public class Info1
     {
         public string seed { get; set; }
         public int results { get; set; }
@@ -37,7 +37,7 @@ namespace Annuaire.Models
         public string version { get; set; }
     }
 
-    public class Root
+    public class Root1
     {
         public List<Result> results { get; set; }
         public Info info { get; set; }
