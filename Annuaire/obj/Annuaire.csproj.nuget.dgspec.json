@@ -46,26 +46,6 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
-            "EntityFrameworkCore.Jet.Data": {
-              "target": "Package",
-              "version": "[3.1.0, )"
-            },
-            "Microsoft.AspNet.WebApi.Client": {
-              "target": "Package",
-              "version": "[5.2.7, )"
-            },
-            "Microsoft.AspNetCore.Diagnostics": {
-              "target": "Package",
-              "version": "[2.2.0, )"
-            },
-            "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[5.0.9, )"
-            },
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[5.0.9, )"
-            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[5.0.0-rc.2.20475.6, )"
@@ -83,26 +63,6 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[5.0.0-rc.2.20516.1, )"
-            },
-            "MySql.Data": {
-              "target": "Package",
-              "version": "[8.0.26, )"
-            },
-            "Newtonsoft.Json": {
-              "target": "Package",
-              "version": "[13.0.1, )"
-            },
-            "Pomelo.EntityFrameworkCore.Lolita.MySql": {
-              "target": "Package",
-              "version": "[1.1.0, )"
-            },
-            "System.Net.Http": {
-              "target": "Package",
-              "version": "[4.3.4, )"
-            },
-            "System.Reactive.Windows.Forms": {
-              "target": "Package",
-              "version": "[5.0.0, )"
             }
           },
           "imports": [

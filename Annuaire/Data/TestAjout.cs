@@ -26,7 +26,7 @@ namespace Annuaire.Models
                     Prenom = "Test",
                     Telephone = "06.20.45.89.75",
                     Service = "Compta",
-                    Date_entrer = DateTime.Parse("2020-1-1")
+                    Date = DateTime.Parse("2020-1-1")
                 },
             #endregion
 
@@ -36,7 +36,7 @@ namespace Annuaire.Models
                     Prenom = "Test2",
                     Telephone = "06.25.89.45.12",
                     Service = "Direction",
-                    Date_entrer = DateTime.Parse("2020-1-2")
+                    Date = DateTime.Parse("2020-1-2")
                 },
 
                 new Personne
@@ -45,7 +45,7 @@ namespace Annuaire.Models
                     Prenom = "Test3",
                     Telephone = "06.47.85.35.69",
                     Service = "Info",
-                    Date_entrer = DateTime.Parse("2020-1-3")
+                    Date = DateTime.Parse("2020-1-3")
                 },
 
                 new Personne
@@ -54,7 +54,7 @@ namespace Annuaire.Models
                     Prenom = "Test4",
                     Telephone = "06.32.59.84.15",
                     Service = "Info",
-                    Date_entrer = DateTime.Parse("202-1-4")
+                    Date = DateTime.Parse("202-1-4")
                 }
             );
             context.SaveChanges();

@@ -1,22 +1,16 @@
-﻿﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-
-*@
-
-@model Annuaire.Models.Personne
+﻿@model Annuaire.Models.Personne
 
 @{
     ViewData["Title"] = "Edit";
-
 }
 
-<h1>Editer</h1>
+<h1>Edit</h1>
 
 <h4>Personne</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <from asp-action="Edit">
+        <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
             <div class="form-group">
@@ -25,9 +19,9 @@
                 <span asp-validation-for="Nom" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Prenom" class="control-label"></label>
-                <input asp-for="Prenom" class="form-control" />
-                <span asp-validation-for="Prenom" class="text-danger"></span>
+                <label asp-for="Date" class="control-label"></label>
+                <input asp-for="Date" class="form-control" />
+                <span asp-validation-for="Date" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Telephone" class="control-label"></label>
@@ -40,26 +34,16 @@
                 <span asp-validation-for="Service" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Date_entrer" class="control-label"></label>
-                <input asp-for="Date_entrer" class="form-control" />
-                <span asp-validation-for="Date_entrer" class="text-danger"></span>
+                <input type="submit" value="Save" class="btn btn-primary" />
             </div>
-
-
-            <div class="form-group">
-                <input type="submit" value="Edit" class="btn btn-primary" />
-                <a type="submit" value="Edit" class="btn">Test</a>
-            </div>
-        </from>
+        </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Retour à l'annuaire'</a>
+    <a asp-action="Index">Back to List</a>
 </div>
 
-
 @section Scripts {
-     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }

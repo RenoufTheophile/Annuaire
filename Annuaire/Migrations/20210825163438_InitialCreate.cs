@@ -17,7 +17,7 @@ namespace Annuaire.Migrations
                     Prenom = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Telephone = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Service = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Date_entrer = table.Column<DateTime>(type: "datetime2", nullable: false)
+                    Date = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {

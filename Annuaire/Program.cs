@@ -1,14 +1,10 @@
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Annuaire.Data;
 using Annuaire.Models;
+using System;
 
 namespace Annuaire
 {
@@ -29,11 +25,12 @@ namespace Annuaire
                 catch (Exception ex)
                 {
                     var logger = services.GetRequiredService<ILogger<Program>>();
-                    logger.LogError(ex, "Une erreur est survenue pendant le transfers de la BDD");
+                    logger.LogError(ex, "An error occurred seeding the DB.");
                 }
             }
 
             host.Run();
+
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
