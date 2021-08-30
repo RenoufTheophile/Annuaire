@@ -155,18 +155,18 @@ namespace Annuaire.Controllers
             var rs = JsonConvert.DeserializeObject<Root>(data);
             return View(rs);
         }
-        [HttpPost]
+        [HttpPost, ActionName("Ramdom")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Ramdom([Bind("Id, first, last, date, phone, service ")] Personne personne)
+        public async Task<IActionResult> Ramdom([Bind("Id, first, last, date, phone, service ")] Root root)
         {
             if (ModelState.IsValid)
             {
 
-                _context.Add(personne);
+                _context.Add(root);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(personne);
+            return View(root);
         }
 
         private bool PersonneExists(int id)

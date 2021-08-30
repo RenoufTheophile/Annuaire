@@ -39,8 +39,8 @@ namespace Annuaire.Models
 
     public class Root1
     {
-        public List<Result> results { get; set; }
-        public Info info { get; set; }
+        public List<Result1> results1 { get; set; }
+        
     }
 
 

@@ -10,32 +10,32 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Create">
+        <form asp-action="Ramdom">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="last" class="control-label"></label>
-                <input asp-for="@Model.results[0].name.last" class="form-control" />
-                <span asp-validation-for="last" class="text-danger"></span>
+                <label asp-for="@Model.last" class="control-label"></label>
+                <input asp-for="@Model.last" class="form-control" />
+                <span asp-validation-for="@Model.last" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="first" class="control-label"></label>
-                <input asp-for="@Model.results[0].name.first" class="form-control" />
-                <span asp-validation-for="first" class="text-danger"></span>
+                <label asp-for="@Model.first" class="control-label"></label>
+                <input asp-for="@Model.first" class="form-control" />
+                <span asp-validation-for="@Model.first" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="date" class="control-label"></label>
-                <input asp-for="@Model.results[0].registered.date" class="form-control" />
-                <span asp-validation-for="date" class="text-danger"></span>
+                <label asp-for="@Model.date" class="control-label"></label>
+                <input asp-for="@Model.date"  class="form-control" />
+                <span asp-validation-for="@Model.date" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="phone" class="control-label"></label>
-                <input asp-for="@Model.results[0].phone" class="form-control" />
-                <span asp-validation-for="phone" class="text-danger"></span>
+                <label asp-for="@Model.phone" class="control-label"></label>
+                <input asp-for="@Model.phone"  class="form-control" />
+                <span asp-validation-for="@Model.phone" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="service" class="control-label"></label>
-                <input asp-for="@Model.results[0].registered.service" class="form-control" />
-                <span asp-validation-for="service" class="text-danger"></span>
+                <label asp-for="@Model.service" class="control-label"></label>
+                <input asp-for="@Model.service"  class="form-control" />
+                <span asp-validation-for="@Model.service" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
