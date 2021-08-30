@@ -7465,23 +7465,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\theop\\.nuget\\packages\\": {},
+    "C:\\Users\\Renouf-Pc\\.nuget\\packages\\": {},
+    "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\theop\\Desktop\\Annuaire\\Annuaire\\Annuaire.csproj",
+      "projectUniqueName": "C:\\Users\\Renouf-Pc\\Desktop\\Annuaire\\Annuaire\\Annuaire.csproj",
       "projectName": "Annuaire",
-      "projectPath": "C:\\Users\\theop\\Desktop\\Annuaire\\Annuaire\\Annuaire.csproj",
-      "packagesPath": "C:\\Users\\theop\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\theop\\Desktop\\Annuaire\\Annuaire\\obj\\",
+      "projectPath": "C:\\Users\\Renouf-Pc\\Desktop\\Annuaire\\Annuaire\\Annuaire.csproj",
+      "packagesPath": "C:\\Users\\Renouf-Pc\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Renouf-Pc\\Desktop\\Annuaire\\Annuaire\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
+        "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\theop\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Renouf-Pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -7491,7 +7494,7 @@
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {},
-        "https://contoso.com/packages/": {}
+        "https://nuget.org": {}
       },
       "frameworks": {
         "net5.0": {
@@ -7546,7 +7549,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }
