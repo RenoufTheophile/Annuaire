@@ -14,20 +14,20 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
 #line 1 "C:\Users\theop\Desktop\Annuaire\Annuaire\Views\_ViewImports.cshtml"
-using MvcMovie;
+using Annuaire;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 2 "C:\Users\theop\Desktop\Annuaire\Annuaire\Views\_ViewImports.cshtml"
-using MvcMovie.Models;
+using Annuaire.Models;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"ca0a14afb8cb142684c667e4a1dbfc44ea14801c", @"/Views/Personnes/IndexService.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"15f339ab26e1f7c427971d34ecda8fd273fe3c5f", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"9267b575695f29b6812df7197ec2f62a698252f0", @"/Views/_ViewImports.cshtml")]
     public class Views_Personnes_IndexService : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<Annuaire.Models.PersonneParService>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "Create", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
