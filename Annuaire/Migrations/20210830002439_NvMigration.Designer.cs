@@ -10,23 +10,23 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Annuaire.Migrations
 {
     [DbContext(typeof(PersonneContext))]
-    [Migration("20210825163438_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20210830002439_NvMigration")]
+    partial class NvMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
+                .UseIdentityColumns()
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.9")
-                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                .HasAnnotation("ProductVersion", "5.0.0-rc.2.20475.6");
 
             modelBuilder.Entity("Annuaire.Models.Personne", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .UseIdentityColumn();
 
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");

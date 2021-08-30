@@ -7,13 +7,21 @@
 <h1>Index</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Create New User</a>
 </p>
+
+<p>
+    <a asp-action="Ramdom">Create New User Ramdom</a>
+</p>
+
 <table class="table">
     <thead>
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.Nom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Prenom)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Date)
@@ -33,6 +41,9 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Nom)
             </td>
+            <th>
+                @Html.DisplayFor(modelItem => item.Prenom)
+            </th>
             <td>
                 @Html.DisplayFor(modelItem => item.Date)
             </td>

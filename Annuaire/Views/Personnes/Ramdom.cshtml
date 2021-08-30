@@ -1,27 +1,57 @@
-﻿﻿@{
-    ViewData["Title"] = "Ramdom User";
+﻿
+@model Annuaire.Models.Root
 
-}
 
-<div class="text-center">
-    <table>
-        <tr>
-            <td><d>Nom</d></td>
-            <td><d>Prenom</d></td>
-            <td><d>Telephone</d></td>
-            <td><d>Service</d></td>
-            <td><d>Date arrivé dans l'entreprise'</d></td>
-        </tr>
+@{ ViewData["Title"] = "Ramdom User"; }
 
-@foreach (var personnes in Model.results)
-        {
-        <tr>
-            <td>@personnes.name.first</td>
-        <td>@personnes.name.last</td>
-        <td>@personnes.phone</td>
-        <td>@personnes.nat</td>
-        <td>@personnes.registered.date</td>
-    </tr>
-        }
-    </table>
+<h1>Edit</h1>
+
+<h4>Personne</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            @foreach (var personnes in Model.results)
+            {
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="@personnes.id" />
+            <div class="form-group">
+                <label asp-for="@personnes.name.first" class="control-label"></label>
+                <input asp-for="@personnes.name.first" class="form-control" />
+                <span asp-validation-for="@personnes.name.first" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@personnes.name.last" class="control-label"></label>
+                <input asp-for="@personnes.name.last" class="form-control" />
+                <span asp-validation-for="@personnes.name.last" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@personnes.registered.date" class="control-label"></label>
+                <input asp-for="@personnes.registered.date" class="form-control" />
+                <span asp-validation-for="@personnes.registered.date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@personnes.phone" class="control-label"></label>
+                <input asp-for="@personnes.phone" class="form-control" />
+                <span asp-validation-for="@personnes.phone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@personnes.nat" class="control-label"></label>
+                <input asp-for="@personnes.nat" class="form-control" />
+                <span asp-validation-for="@personnes.nat" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+            }
+        </form>
+    </div>
 </div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
