@@ -56,7 +56,7 @@ namespace Annuaire.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id, Nom, Prenom, Telephone, Service, Date")] Personne personne)
+        public async Task<IActionResult> Create([Bind("Id, last, first, phone, service, date")] Personne personne)
         {
             if (ModelState.IsValid)
             {
@@ -88,7 +88,7 @@ namespace Annuaire.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id, Nom, Prenom, Telephone, Service, Date")] Personne personne)
+        public async Task<IActionResult> Edit(int id, [Bind("Id, last, first, phone, service, date")] Personne personne)
         {
             if (id != personne.Id)
             {
@@ -157,7 +157,7 @@ namespace Annuaire.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Ramdom([Bind("Id, Nom, Prenom, Telephone, Service, Date")] Name name)
+        public async Task<IActionResult> Ramdom([Bind("Id, last, first, phone, service, date")] Name name)
         {
             if (ModelState.IsValid)
             {
