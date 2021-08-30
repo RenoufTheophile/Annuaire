@@ -18,10 +18,12 @@ namespace Annuaire.Models
         public string first { get; set; }
         public string title { get; set; }
         public int age { get; set; }
+
+      
        
        
     }
-
+    
     public class Name
     {
         public string title { get; set; }
@@ -39,7 +41,7 @@ namespace Annuaire.Models
     {
 
        
-        public Personne personne { get; set; }
+       
         public Name name { get; set; }
 
         public Registered registered { get; set; }
@@ -62,6 +64,8 @@ namespace Annuaire.Models
     {
         public List<Result> results { get; set; }
         public Info info { get; set; }
+
+       
 
       
     }

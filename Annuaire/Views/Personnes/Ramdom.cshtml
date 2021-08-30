@@ -11,34 +11,34 @@
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Ramdom">
-            @foreach (var personnes in Model.results)
+            @for (int i=0; i<Model.results.Count; i++)
                     { 
 
             <div class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="@personnes.name.first" class="control-label"></label>
-                <input asp-for="ToString(@personnes.name.first)" class="form-control" />
-                <span asp-validation-for="@personnes.name.first" class="text-danger"></span>
+                <label asp-for="@Model.results[i].name.first" class="control-label"></label>
+                <input asp-for="@Model.results[i].name.first" class="form-control" />
+                <span asp-validation-for="@Model.results[i].name.first" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="@personnes.name.last" class="control-label"></label>
-                <input asp-for="@personnes.name.last" class="form-control" />
-                <span asp-validation-for="@personnes.name.last" class="text-danger"></span>
+                <label asp-for="@Model.results[i].name.last" class="control-label"></label>
+                <input asp-for="@Model.results[i].name.last" class="form-control" />
+                <span asp-validation-for="@Model.results[i].name.last" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="@personnes.registered.date" class="control-label"></label>
-                <input asp-for="@personnes.registered.date" class="form-control" />
-                <span asp-validation-for="@personnes.registered.date" class="text-danger"></span>
+                <label asp-for="@Model.results[i].registered.date" class="control-label"></label>
+                <input asp-for="@Model.results[i].registered.date" class="form-control" />
+                <span asp-validation-for="@Model.results[i].registered.date" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="@personnes.phone" class="control-label"></label>
-                <input asp-for="@personnes.phone" class="form-control" />
-                <span asp-validation-for="@personnes.phone" class="text-danger"></span>
+                <label asp-for="@Model.results[i].phone" class="control-label"></label>
+                <input asp-for="@Model.results[i].phone" class="form-control" />
+                <span asp-validation-for="@Model.results[i].phone" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="@personnes.registered.service " class="control-label"></label>
-                <input asp-for="@personnes.registered.service " class="form-control" />
-                <span asp-validation-for="@personnes.registered.service " class="text-danger"></span>
+                <label asp-for="@Model.results[i].registered.service " class="control-label"></label>
+                <input asp-for="@Model.results[i].registered.service " class="form-control" />
+                <span asp-validation-for="@Model.results[i].registered.service " class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
