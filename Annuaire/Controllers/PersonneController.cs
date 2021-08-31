@@ -156,8 +156,8 @@ namespace Annuaire.Controllers
             var url = "https://randomuser.me/api/?inc=name,email,registered,phone";
             WebClient wc = new WebClient();
             var data = wc.DownloadString(url);
-            var personne = JsonConvert.DeserializeObject<Root>(data);
-            return View(personne);
+            var root = JsonConvert.DeserializeObject<Root>(data);
+            return View(root);
         }
         
        

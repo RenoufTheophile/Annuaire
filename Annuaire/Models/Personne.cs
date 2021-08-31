@@ -31,33 +31,15 @@ namespace Annuaire.Models
         public int age { get; set; }
         [Column("email")]
         public string email { get; set; }
-        public Root root { get; }
-
+        public Root root { get; set; }
     }
 
-    public class Name
-    {
-        [Column("title")]
-        public string title { get; set; }
-        [Column("last")]
-        public string last { get; set; }
-        [Column("first")]
-        public string first { get; set; }
-    }
-
-
-    
-    public class Registered
-    {
-        [Column("date")]
-        public DateTime date { get; set; }
-        [Column("service")]
-        public string service { get; set; }
-    }
+   
     public class Result
     {
-        public Name name { get; set; }
-        public Registered registered { get; set; }
+        public Personne personne { get; set; }
+      
+        [Key]
         [Column("email")]
         public string email { get; set; }
         [Column("phone")]
@@ -66,13 +48,21 @@ namespace Annuaire.Models
 
     public class Info
     {
+        [Key]
+        [Column("seed")]
         public string seed { get; set; }
+        [Column("results")]
         public int results { get; set; }
+        [Column("page")]
         public int page { get; set; }
+        [Column("version")]
         public string version { get; set; }
     }
     public class Root
     {
+        [Key]
+        [Column("IdRoot")]
+        public int IdRoot { get; set; }
         public List<Result> results { get; set; }
         public Info info { get; set; }
         

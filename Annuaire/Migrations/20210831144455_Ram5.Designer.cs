@@ -4,14 +4,16 @@ using Annuaire.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Annuaire.Migrations
 {
     [DbContext(typeof(PersonneContext))]
-    partial class PersonneContextModelSnapshot : ModelSnapshot
+    [Migration("20210831144455_Ram5")]
+    partial class Ram5
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -42,6 +44,25 @@ namespace Annuaire.Migrations
                     b.ToTable("Info");
                 });
 
+            modelBuilder.Entity("Annuaire.Models.Name", b =>
+                {
+                    b.Property<string>("title")
+                        .HasColumnType("nvarchar(450)")
+                        .HasColumnName("title");
+
+                    b.Property<string>("first")
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("first");
+
+                    b.Property<string>("last")
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("last");
+
+                    b.HasKey("title");
+
+                    b.ToTable("Name");
+                });
+
             modelBuilder.Entity("Annuaire.Models.Personne", b =>
                 {
                     b.Property<int>("Id")
@@ -66,15 +87,15 @@ namespace Annuaire.Migrations
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("first");
 
+                    b.Property<string>("infoseed")
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<string>("last")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("phone")
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("phone");
-
-                    b.Property<int?>("rootIdRoot")
-                        .HasColumnType("int");
 
                     b.Property<string>("service")
                         .HasColumnType("nvarchar(max)")
@@ -86,9 +107,24 @@ namespace Annuaire.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("rootIdRoot");
+                    b.HasIndex("infoseed");
 
                     b.ToTable("Personne");
+                });
+
+            modelBuilder.Entity("Annuaire.Models.Registered", b =>
+                {
+                    b.Property<DateTime>("date")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("date");
+
+                    b.Property<string>("service")
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("service");
+
+                    b.HasKey("date");
+
+                    b.ToTable("Registered");
                 });
 
             modelBuilder.Entity("Annuaire.Models.Result", b =>
@@ -97,66 +133,31 @@ namespace Annuaire.Migrations
                         .HasColumnType("nvarchar(450)")
                         .HasColumnName("email");
 
-                    b.Property<int?>("RootIdRoot")
+                    b.Property<int?>("PersonneId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("personneId")
-                        .HasColumnType("int");
+                    b.Property<string>("nametitle")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("phone")
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("phone");
 
+                    b.Property<DateTime?>("registereddate")
+                        .HasColumnType("datetime2");
+
                     b.HasKey("email");
 
-                    b.HasIndex("RootIdRoot");
+                    b.HasIndex("PersonneId");
 
-                    b.HasIndex("personneId");
+                    b.HasIndex("nametitle");
+
+                    b.HasIndex("registereddate");
 
                     b.ToTable("Result");
                 });
 
-            modelBuilder.Entity("Annuaire.Models.Root", b =>
-                {
-                    b.Property<int>("IdRoot")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasColumnName("IdRoot")
-                        .UseIdentityColumn();
-
-                    b.Property<string>("infoseed")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("IdRoot");
-
-                    b.HasIndex("infoseed");
-
-                    b.ToTable("Root");
-                });
-
             modelBuilder.Entity("Annuaire.Models.Personne", b =>
-                {
-                    b.HasOne("Annuaire.Models.Root", "root")
-                        .WithMany()
-                        .HasForeignKey("rootIdRoot");
-
-                    b.Navigation("root");
-                });
-
-            modelBuilder.Entity("Annuaire.Models.Result", b =>
-                {
-                    b.HasOne("Annuaire.Models.Root", null)
-                        .WithMany("results")
-                        .HasForeignKey("RootIdRoot");
-
-                    b.HasOne("Annuaire.Models.Personne", "personne")
-                        .WithMany()
-                        .HasForeignKey("personneId");
-
-                    b.Navigation("personne");
-                });
-
-            modelBuilder.Entity("Annuaire.Models.Root", b =>
                 {
                     b.HasOne("Annuaire.Models.Info", "info")
                         .WithMany()
@@ -165,7 +166,26 @@ namespace Annuaire.Migrations
                     b.Navigation("info");
                 });
 
-            modelBuilder.Entity("Annuaire.Models.Root", b =>
+            modelBuilder.Entity("Annuaire.Models.Result", b =>
+                {
+                    b.HasOne("Annuaire.Models.Personne", null)
+                        .WithMany("results")
+                        .HasForeignKey("PersonneId");
+
+                    b.HasOne("Annuaire.Models.Name", "name")
+                        .WithMany()
+                        .HasForeignKey("nametitle");
+
+                    b.HasOne("Annuaire.Models.Registered", "registered")
+                        .WithMany()
+                        .HasForeignKey("registereddate");
+
+                    b.Navigation("name");
+
+                    b.Navigation("registered");
+                });
+
+            modelBuilder.Entity("Annuaire.Models.Personne", b =>
                 {
                     b.Navigation("results");
                 });
