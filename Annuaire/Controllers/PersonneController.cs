@@ -167,6 +167,7 @@ namespace Annuaire.Controllers
         {
             if (ModelState.IsValid)
             {
+                
                 _context.Add(personne);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));

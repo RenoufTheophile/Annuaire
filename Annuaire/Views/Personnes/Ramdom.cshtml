@@ -1,4 +1,4 @@
-﻿@model Annuaire.Models.Root
+﻿@model Annuaire.Models.Personne
 @{
     ViewBag.Title = "Ramdom";
 }
@@ -19,29 +19,29 @@
         <form asp-action="Ramdom">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for=@Model.results[0].name.last id="last" class="control-label"></label>
-                <input asp-for=@Model.results[0].name.last id="last" class="form-control" />
-                <span asp-validation-for=@Model.results[0].name.last id="last" class="text-danger"></span>
+                <label asp-for=@Model.root.results[0].name.last id="last" class="control-label"></label>
+                <input asp-for=@Model.root.results[0].name.last text="test" id="last" class="form-control" />
+                <span asp-validation-for=@Model.root.results[0].name.last id="last" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for=@Model.results[0].name.first id="first" class="control-label"></label>
-                <input asp-for=@Model.results[0].name.first id="first" class="form-control" />
-                <span asp-validation-for=@Model.results[0].name.first id="first" class="text-danger"></span>
+                <label asp-for=@Model.root.results[0].name.first id="first" class="control-label"></label>
+                <input asp-for=@Model.root.results[0].name.first id="first" class="form-control" />
+                <span asp-validation-for=@Model.root.results[0].name.first id="first" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for=@Model.results[0].registered.date id="date" class="control-label"></label>
-                <input asp-for=@Model.results[0].registered.date id="date" class="form-control" />
-                <span asp-validation-for=@Model.results[0].registered.date id="date" class="text-danger"></span>
+                <label asp-for=@Model.root.results[0].registered.date id="date" class="control-label"></label>
+                <input asp-for=@Model.root.results[0].registered.date id="date" class="form-control" />
+                <span asp-validation-for=@Model.root.results[0].registered.date id="date" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for=@Model.results[0].phone id="phone" class="control-label"></label>
-                <input asp-for=@Model.results[0].phone id="phone" class="form-control" />
-                <span asp-validation-for=@Model.results[0].phone id="phone" class="text-danger"></span>
+                <label asp-for=@Model.root.results[0].phone id="phone" class="control-label"></label>
+                <input asp-for=@Model.root.results[0].phone id="phone" class="form-control" />
+                <span asp-validation-for=@Model.root.results[0].phone id="phone" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for=@Model.results[0].registered.service id="service" class="control-label"></label>
-                <input asp-for=@Model.results[0].registered.service id="service" class="form-control" />
-                <span asp-validation-for=@Model.results[0].registered.service id="service" class="text-danger"></span>
+                <label asp-for=@Model.root.results[0].registered.service id="service" class="control-label"></label>
+                <input asp-for=@Model.root.results[0].registered.service id="service" class="form-control" />
+                <span asp-validation-for=@Model.root.results[0].registered.service id="service" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />

@@ -11,6 +11,6 @@ namespace Annuaire.Data
         }
 
         public DbSet<Personne> Personne { get; set; }
-       
+  
     }
 }
