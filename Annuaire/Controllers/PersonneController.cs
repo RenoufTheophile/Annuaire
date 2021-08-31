@@ -156,22 +156,39 @@ namespace Annuaire.Controllers
             var url = "https://randomuser.me/api/?inc=name,email,registered,phone";
             WebClient wc = new WebClient();
             var data = wc.DownloadString(url);
-            var root = JsonConvert.DeserializeObject<Root>(data);
-            return View(root);
+            var personne = JsonConvert.DeserializeObject<Personne>(data);
+            if (personne == null)
+            {
+                return NotFound();
+            }
+            return View(personne);
         }
         
        
         [HttpPost, ActionName("Ramdom")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Ramdom([Bind("Id, first, last, date, phone, service ")] Personne personne)
+        public async Task<IActionResult> Ramdom( Personne personne)
         {
             if (ModelState.IsValid)
             {
-                
-                _context.Add(personne);
+                var url = "https://randomuser.me/api/?inc=name,email,registered,phone";
+                WebClient wc = new WebClient();
+                var data = wc.DownloadString(url);
+                var personness = JsonConvert.DeserializeObject<Personne>(data);
+                Personne personnes = new Personne
+                {
+                    last = personness.results[0].name.last,
+                    first = personness.results[0].name.first,
+                    date=personness.results[0].registered.date,
+                    phone=personness.results[0].phone,
+                    service=personne.service
+                };
+               
+                _context.Add(personnes);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            
             return View(personne);
         }
        

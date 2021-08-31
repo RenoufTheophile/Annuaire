@@ -1,16 +1,8 @@
 ﻿@model Annuaire.Models.Personne
 @{
-    ViewBag.Title = "Ramdom";
+    ViewData["Title"] = "Ramdom";
 }
-
-
-
-
-
-
-
-
-<h1>Create</h1>
+<h1>Ramdom</h1>
 
 <h4>Personne</h4>
 <hr />
@@ -18,12 +10,10 @@
     <div class="col-md-4">
         <form asp-action="Ramdom">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            @foreach (var pers in Model.root.results)
-            {
             <div class="form-group">
-                <label asp-for="@pers.personne.last" class="control-label"></label>
-                <input asp-for="@pers.personne.last" class="form-control" />
-                <span asp-validation-for="@pers.personne.last" class="text-danger"></span>
+                <label asp-for="last" id="last" class="control-label"></label>
+                <input asp-for="@Model.results[0].phone" id="last" class="form-control" />
+                <span asp-validation-for="last" id="last" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="first" class="control-label"></label>
@@ -46,9 +36,9 @@
                 <span asp-validation-for="service" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Ramdom" class="btn btn-primary" />
+                <input type="submit" value="Create" class="btn btn-primary" />
             </div>
-            }
+          
         </form>
     </div>
 </div>
