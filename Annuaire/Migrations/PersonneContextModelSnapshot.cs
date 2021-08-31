@@ -41,25 +41,13 @@ namespace Annuaire.Migrations
                     b.Property<string>("last")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("page")
-                        .HasColumnType("int");
-
                     b.Property<string>("phone")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("results")
-                        .HasColumnType("int");
-
-                    b.Property<string>("seed")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("service")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("title")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("version")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");

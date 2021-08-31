@@ -154,9 +154,9 @@ namespace Annuaire.Controllers
         public IActionResult Ramdom()
         {
             var url = "https://randomuser.me/api/?inc=name,email,registered,phone";
-            WebClient wc = new();
+            WebClient wc = new WebClient();
             var data = wc.DownloadString(url);
-            var personne = JsonConvert.DeserializeObject<Personne>(data);
+            var personne = JsonConvert.DeserializeObject<Root>(data);
             return View(personne);
         }
         
