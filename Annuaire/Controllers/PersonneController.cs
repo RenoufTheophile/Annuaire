@@ -183,13 +183,12 @@ namespace Annuaire.Controllers
         private void AddDetails(Personne obj)
         {
             connection();
-            SqlCommand com = new SqlCommand("Personne", con);
+            SqlCommand com = new SqlCommand("Personne2", con);
             com.CommandType = System.Data.CommandType.StoredProcedure;
             com.Parameters.AddWithValue("@last", obj.last);
             com.Parameters.AddWithValue("@first", obj.first);
             com.Parameters.AddWithValue("@date", obj.date);
             com.Parameters.AddWithValue("@phone", obj.phone);
-            com.Parameters.AddWithValue("@service", obj.service);
             con.Open();
             com.ExecuteNonQuery();
             con.Close();
