@@ -66,11 +66,19 @@ namespace Annuaire.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id, last, first, phone, service, date")] Personne personne)
+        public async Task<IActionResult> Create( Personne personne)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(personne);
+                Personne personnes = new()
+                {
+                    Last = personne.Last,
+                    First = personne.First,
+                    Date = personne.Date,
+                    Phone = personne.Phone,
+                    Service = personne.Service
+                };
+                _context.Add(personnes);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
@@ -98,7 +106,7 @@ namespace Annuaire.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id, last, first, phone, service, date")] Personne personne)
+        public async Task<IActionResult> Edit(int id,Personne personne)
         {
             if (id != personne.Id)
             {
@@ -109,6 +117,14 @@ namespace Annuaire.Controllers
             {
                 try
                 {
+                    Personne personnes = new()
+                    {
+                        Last = personne.Last,
+                        First = personne.First,
+                        Date = personne.Date,
+                        Phone = personne.Phone,
+                        Service = personne.Service
+                    };
                     _context.Update(personne);
                     await _context.SaveChangesAsync();
                 }
