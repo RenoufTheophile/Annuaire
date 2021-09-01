@@ -22,39 +22,39 @@ namespace Annuaire.Models
             context.Personne.AddRange(
                 new Personne
                 {
-                    last = "Test",
-                    first = "Test",
-                    phone = "06.20.45.89.75",
-                    service = "Compta",
-                    date = DateTime.Parse("2020-1-1")
+                    Last = "Test",
+                    First = "Test",
+                    Phone = "06.20.45.89.75",
+                    Service = "Compta",
+                    Date = DateTime.Parse("2020-1-1")
                 },
             #endregion
 
                 new Personne
                 {
-                    last = "Test2 ",
-                    first = "Test2",
-                    phone = "06.25.89.45.12",
-                    service = "Direction",
-                    date = DateTime.Parse("2020-1-2")
+                    Last = "Test2 ",
+                    First = "Test2",
+                    Phone = "06.25.89.45.12",
+                    Service = "Direction",
+                    Date = DateTime.Parse("2020-1-2")
                 },
 
                 new Personne
                 {
-                    last = "Test3",
-                    first = "Test3",
-                    phone = "06.47.85.35.69",
-                    service = "Info",
-                    date = DateTime.Parse("2020-1-3")
+                    Last = "Test3",
+                    First = "Test3",
+                    Phone = "06.47.85.35.69",
+                    Service = "Info",
+                    Date = DateTime.Parse("2020-1-3")
                 },
 
                 new Personne
                 {
-                    last = "Test4",
-                    first = "Test4",
-                    phone = "06.32.59.84.15",
-                    service = "Info",
-                    date = DateTime.Parse("202-1-4")
+                    Last = "Test4",
+                    First = "Test4",
+                    Phone = "06.32.59.84.15",
+                    Service = "Info",
+                    Date = DateTime.Parse("202-1-4")
                 }
             );
             context.SaveChanges();

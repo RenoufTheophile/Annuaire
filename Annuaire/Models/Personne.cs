@@ -13,38 +13,42 @@ namespace Annuaire.Models
         [Column("Id")]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        public string last { get; set; }
+        public string Last { get; set; }
 
         [Display(Name = "Release Date")]
         [DataType(DataType.Date)]
         [Column("date")]
-        public DateTime date { get; set; }
+        public DateTime Date { get; set; }
         [Column("phone")]
-        public string phone { get; set; }
+        public string Phone { get; set; }
         [Column("service")]
-        public string service { get; set; }
+        public string Service { get; set; }
         [Column("first")]
-        public string first { get; set; }
+        public string First { get; set; }
         [Column("title")]
-        public string title { get; set; }
+        public string Title { get; set; }
         [Column("age")]
-        public int age { get; set; }
+        public int Age { get; set; }
         [Column("email")]
-        public string email { get; set; }
-        public Root root { get; }
-        public List<Result> results { get; set; }
-        public Info info { get; set; }
+        public string Email { get; set; }
+        public Root Root { get; }
+        public List<Result> Results { get; set; }
+        public Info Info { get; set; }
+        public List<Personne> Personnes;
+        
+        public string PersonneService { get; set; }
+        public string SearchString { get; set; }
     }
 
     public class Name
     {
         [Key]
         [Column("title")]
-        public string title { get; set; }
+        public string Title { get; set; }
         [Column("last")]
-        public string last { get; set; }
+        public string Last { get; set; }
         [Column("first")]
-        public string first { get; set; }
+        public string First { get; set; }
     }
 
 
@@ -53,37 +57,37 @@ namespace Annuaire.Models
     {
         [Key]
         [Column("date")]
-        public DateTime date { get; set; }
+        public DateTime Date { get; set; }
         [Column("service")]
-        public string service { get; set; }
+        public string Service { get; set; }
     }
     public class Result
     {
-        public Name name { get; set; }
-        public Registered registered { get; set; }
+        public Name Name { get; set; }
+        public Registered Registered { get; set; }
         [Key]
         [Column("email")]
-        public string email { get; set; }
+        public string Email { get; set; }
         [Column("phone")]
-        public string phone { get; set; }
+        public string Phone { get; set; }
     }
 
     public class Info
     {
         [Key]
         [Column("seed")]
-        public string seed { get; set; }
+        public string Seed { get; set; }
         [Column("results")]
-        public int results { get; set; }
+        public int Results { get; set; }
         [Column("page")]
-        public int page { get; set; }
+        public int Page { get; set; }
         [Column("version")]
-        public string version { get; set; }
+        public string Version { get; set; }
     }
     public class Root
     {
-        public List<Result> results { get; set; }
-        public Info info { get; set; }
+        public List<Result> Results { get; set; }
+        public Info Info { get; set; }
         
 
     }

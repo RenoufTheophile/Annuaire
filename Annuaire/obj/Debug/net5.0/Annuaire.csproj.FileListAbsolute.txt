@@ -507,7 +507,6 @@ C:\Users\Renouf-Pc\Desktop\Annuaire\Annuaire\obj\Debug\net5.0\Razor\Views\Person
 C:\Users\Renouf-Pc\Desktop\Annuaire\Annuaire\obj\Debug\net5.0\Razor\Views\Personnes\Edit.cshtml.g.cs
 C:\Users\Renouf-Pc\Desktop\Annuaire\Annuaire\obj\Debug\net5.0\Razor\Views\Personnes\Index.cshtml.g.cs
 C:\Users\Renouf-Pc\Desktop\Annuaire\Annuaire\obj\Debug\net5.0\Razor\Views\Personnes\IndexPersonne.cshtml.g.cs
-C:\Users\Renouf-Pc\Desktop\Annuaire\Annuaire\obj\Debug\net5.0\Razor\Views\Personnes\IndexService.cshtml.g.cs
 C:\Users\Renouf-Pc\Desktop\Annuaire\Annuaire\obj\Debug\net5.0\Razor\Views\Personnes\Ramdom.cshtml.g.cs
 C:\Users\Renouf-Pc\Desktop\Annuaire\Annuaire\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\Renouf-Pc\Desktop\Annuaire\Annuaire\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs

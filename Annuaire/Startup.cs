@@ -74,11 +74,13 @@ namespace Annuaire
 
             // app.UseResponseCaching();
 
-           
+
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllers();
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
             });
         }
         public Startup(IConfiguration configuration)

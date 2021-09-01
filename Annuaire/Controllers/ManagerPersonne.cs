@@ -26,9 +26,15 @@ namespace Annuaire.Controllers
         }
 
         // GET: Personnes
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString)
         {
-            return View(await _context.Personne.ToListAsync());
+            var personnes = from m in _context.Personne
+                            select m;
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                personnes = personnes.Where(s => s.Last.Contains(searchString));
+            }
+            return View(await personnes.ToListAsync());
         }
 
         // GET: Personnes/Details/5
@@ -154,7 +160,7 @@ namespace Annuaire.Controllers
         public IActionResult Ramdom()
         {
             var url = "https://randomuser.me/api/?inc=name,email,registered,phone";
-            WebClient wc = new WebClient();
+            WebClient wc = new();
             var data = wc.DownloadString(url);
             var personne = JsonConvert.DeserializeObject<Personne>(data);
             if (personne == null)
@@ -172,16 +178,16 @@ namespace Annuaire.Controllers
             if (ModelState.IsValid)
             {
                 var url = "https://randomuser.me/api/?inc=name,email,registered,phone";
-                WebClient wc = new WebClient();
+                WebClient wc = new();
                 var data = wc.DownloadString(url);
                 var personness = JsonConvert.DeserializeObject<Personne>(data);
-                Personne personnes = new Personne
+                Personne personnes = new()
                 {
-                    last = personness.results[0].name.last,
-                    first = personness.results[0].name.first,
-                    date=personness.results[0].registered.date,
-                    phone=personness.results[0].phone,
-                    service=personne.service
+                    Last = personness.Results[0].Name.Last,
+                    First = personness.Results[0].Name.First,
+                    Date=personness.Results[0].Registered.Date,
+                    Phone=personness.Results[0].Phone,
+                    Service=personne.Service
                 };
                
                 _context.Add(personnes);
